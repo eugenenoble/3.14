@@ -4283,9 +4283,9 @@ iperf_new_stream(struct iperf_test *test, int s, int sender)
         }
         if (tempdir == 0){
 #if defined(__ANDROID__)
-            tempdir = "/data/local/tmp";
+            tempdir = "/data/data/com.kurrrrva.iperfdolia/cache";
 #else
-            tempdir = "/tmp";
+            tempdir = "/data/user/0/com.kurrrrva.iperfdolia";
 #endif
         }
         snprintf(template, sizeof(template) / sizeof(char), "%s/iperf3.XXXXXX", tempdir);
